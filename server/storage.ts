@@ -46,34 +46,54 @@ export class MemStorage implements IStorage {
     // Seed locations
     const sampleLocations: InsertLocation[] = [
       {
-        name: "The Old Crown",
-        address: "123 High Street, Cambridge CB1 2AB",
-        phone: "+44 1223 123456",
-        rating: "4.8",
-        reviewCount: 127,
+        name: "Firkin on Yonge",
+        address: "5165 Yonge St, North York, ON M2N 5P5",
+        phone: "(416) 222-3547",
+        rating: "4.3",
+        reviewCount: 245,
         status: "Open until 11:00 PM",
-        hours: "Mon-Thu: 11:00 AM - 11:00 PM, Fri-Sat: 11:00 AM - 12:00 AM, Sun: 12:00 PM - 10:30 PM",
+        hours: "Mon-Thu: 11:00 AM - 11:00 PM, Fri-Sat: 11:00 AM - 12:00 AM, Sun: 11:00 AM - 10:00 PM",
         image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600"
       },
       {
-        name: "The King's Head",
-        address: "45 Market Square, Oxford OX1 3DH",
-        phone: "+44 1865 234567",
-        rating: "4.6",
-        reviewCount: 89,
-        status: "Open until 10:30 PM",
-        hours: "Mon-Thu: 11:00 AM - 10:30 PM, Fri-Sat: 11:00 AM - 11:30 PM, Sun: 12:00 PM - 10:00 PM",
+        name: "Firkin on Queen",
+        address: "539 Queen St W, Toronto, ON M5V 2B4",
+        phone: "(416) 504-3836",
+        rating: "4.1",
+        reviewCount: 312,
+        status: "Open until 12:00 AM",
+        hours: "Mon-Thu: 11:00 AM - 11:00 PM, Fri-Sat: 11:00 AM - 12:00 AM, Sun: 11:00 AM - 10:00 PM",
         image: "https://images.unsplash.com/photo-1544145945-f90425340c7e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600"
       },
       {
-        name: "The Rose & Crown",
-        address: "12 Village Green, Cotswolds GL54 1EN",
-        phone: "+44 1451 345678",
-        rating: "4.9",
-        reviewCount: 156,
+        name: "Firkin on King",
+        address: "749 King St W, Toronto, ON M5V 1N3",
+        phone: "(416) 504-3470",
+        rating: "4.2",
+        reviewCount: 189,
         status: "Open until 11:30 PM",
-        hours: "Mon-Thu: 11:00 AM - 11:00 PM, Fri-Sat: 11:00 AM - 12:00 AM, Sun: 12:00 PM - 10:30 PM",
+        hours: "Mon-Thu: 11:00 AM - 11:00 PM, Fri-Sat: 11:00 AM - 12:00 AM, Sun: 11:00 AM - 10:00 PM",
         image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600"
+      },
+      {
+        name: "Firkin on Bloor",
+        address: "488 Bloor St W, Toronto, ON M5S 1Y3",
+        phone: "(416) 928-0822",
+        rating: "4.0",
+        reviewCount: 156,
+        status: "Open until 11:00 PM",
+        hours: "Mon-Thu: 11:00 AM - 11:00 PM, Fri-Sat: 11:00 AM - 12:00 AM, Sun: 11:00 AM - 10:00 PM",
+        image: "https://images.unsplash.com/photo-1571997478779-2adcbbe9ab2f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600"
+      },
+      {
+        name: "Firkin on Danforth",
+        address: "393 Danforth Ave, Toronto, ON M4K 1P1",
+        phone: "(416) 778-4424",
+        rating: "4.4",
+        reviewCount: 203,
+        status: "Open until 11:00 PM",
+        hours: "Mon-Thu: 11:00 AM - 11:00 PM, Fri-Sat: 11:00 AM - 12:00 AM, Sun: 11:00 AM - 10:00 PM",
+        image: "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600"
       }
     ];
 
@@ -103,14 +123,16 @@ export class MemStorage implements IStorage {
         description: "Local Cumberland sausages with buttery mashed potato and onion gravy",
         price: "12.95",
         category: "food",
-        subcategory: "mains"
+        subcategory: "mains",
+        image: null
       },
       {
         name: "Steak & Kidney Pie",
         description: "Tender beef and kidney in rich gravy, encased in golden pastry",
         price: "15.95",
         category: "food",
-        subcategory: "mains"
+        subcategory: "mains",
+        image: null
       },
       // Food - Pub Favorites
       {
@@ -118,21 +140,24 @@ export class MemStorage implements IStorage {
         description: "Local cheeses, ham, pickles, crusty bread, and apple",
         price: "10.95",
         category: "food",
-        subcategory: "pub-favorites"
+        subcategory: "pub-favorites",
+        image: null
       },
       {
         name: "Beef & Ale Casserole",
         description: "Slow-cooked beef in local ale with root vegetables",
         price: "16.50",
         category: "food",
-        subcategory: "pub-favorites"
+        subcategory: "pub-favorites",
+        image: null
       },
       {
         name: "Sunday Roast",
         description: "Choice of roast beef, lamb, or chicken with Yorkshire pudding",
         price: "17.95",
         category: "food",
-        subcategory: "pub-favorites"
+        subcategory: "pub-favorites",
+        image: null
       },
       // Drinks - Ales & Beers
       {
@@ -140,21 +165,24 @@ export class MemStorage implements IStorage {
         description: "Our signature house bitter with hoppy finish",
         price: "4.20",
         category: "drinks",
-        subcategory: "ales"
+        subcategory: "ales",
+        image: null
       },
       {
         name: "London Pride",
         description: "Classic English bitter with malty sweetness",
         price: "4.50",
         category: "drinks",
-        subcategory: "ales"
+        subcategory: "ales",
+        image: null
       },
       {
         name: "Guest Ale",
         description: "Rotating selection of local craft ales",
         price: "4.80",
         category: "drinks",
-        subcategory: "ales"
+        subcategory: "ales",
+        image: null
       },
       // Drinks - Wines & Spirits
       {
@@ -162,21 +190,24 @@ export class MemStorage implements IStorage {
         description: "Smooth and fruity house selection",
         price: "5.50",
         category: "drinks",
-        subcategory: "wines"
+        subcategory: "wines",
+        image: null
       },
       {
         name: "Single Malt Whisky",
         description: "Premium Scottish single malt selection",
         price: "6.20",
         category: "drinks",
-        subcategory: "spirits"
+        subcategory: "spirits",
+        image: null
       },
       {
         name: "Premium Gin & Tonic",
         description: "Craft gin with premium tonic and garnish",
         price: "7.50",
         category: "drinks",
-        subcategory: "spirits"
+        subcategory: "spirits",
+        image: null
       },
       // Drinks - Soft Drinks
       {
@@ -184,21 +215,24 @@ export class MemStorage implements IStorage {
         description: "Freshly squeezed orange juice",
         price: "2.50",
         category: "drinks",
-        subcategory: "soft"
+        subcategory: "soft",
+        image: null
       },
       {
         name: "Traditional Lemonade",
         description: "House-made traditional lemonade",
         price: "2.20",
         category: "drinks",
-        subcategory: "soft"
+        subcategory: "soft",
+        image: null
       },
       {
         name: "Coffee & Tea",
         description: "Freshly brewed coffee or selection of teas",
         price: "2.80",
         category: "drinks",
-        subcategory: "soft"
+        subcategory: "soft",
+        image: null
       },
       // Desserts
       {
@@ -206,21 +240,24 @@ export class MemStorage implements IStorage {
         description: "Warm sponge pudding with toffee sauce and vanilla ice cream",
         price: "6.95",
         category: "desserts",
-        subcategory: "traditional"
+        subcategory: "traditional",
+        image: null
       },
       {
         name: "Apple Crumble",
         description: "Traditional apple crumble with custard or cream",
         price: "6.50",
         category: "desserts",
-        subcategory: "traditional"
+        subcategory: "traditional",
+        image: null
       },
       {
         name: "Cheese Board",
         description: "Selection of British cheeses with crackers and chutney",
         price: "8.95",
         category: "desserts",
-        subcategory: "cheese"
+        subcategory: "cheese",
+        image: null
       }
     ];
 

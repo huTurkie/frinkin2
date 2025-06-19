@@ -27,7 +27,7 @@ export default function FeaturesSection() {
             Why Choose Firkin Pubs
           </h2>
           <p className="text-xl text-pub-gray max-w-3xl mx-auto">
-            Experience the finest in British pub culture with our commitment to quality, tradition, and community.
+            Experience Toronto's finest pub culture with our commitment to quality, tradition, and community since 1987.
           </p>
         </div>
 

@@ -14,6 +14,7 @@ export default function ContactSection() {
     name: "",
     email: "",
     subject: "General Inquiry",
+    location: "Corporate HQ",
     message: ""
   });
 
@@ -26,7 +27,7 @@ export default function ContactSection() {
         title: "Message sent successfully!",
         description: "We'll get back to you soon.",
       });
-      setFormData({ name: "", email: "", subject: "General Inquiry", message: "" });
+      setFormData({ name: "", email: "", subject: "General Inquiry", location: "Corporate HQ", message: "" });
     },
     onError: () => {
       toast({
@@ -45,13 +46,13 @@ export default function ContactSection() {
   const contactInfo = [
     {
       icon: MapPin,
-      title: "Head Office",
-      content: "123 Brewery Lane\nLondon, England SW1A 1AA"
+      title: "Corporate HQ",
+      content: "20 Steelcase Rd. W\nUnit 1C\nMarkham, ON L3R 1B2"
     },
     {
       icon: Phone,
       title: "Phone",
-      content: "+44 20 7946 0958"
+      content: "(905) 305-9792"
     },
     {
       icon: Mail,
@@ -61,7 +62,7 @@ export default function ContactSection() {
     {
       icon: Clock,
       title: "Hours",
-      content: "Mon-Thu: 11:00 AM - 11:00 PM\nFri-Sat: 11:00 AM - 12:00 AM\nSun: 12:00 PM - 10:30 PM"
+      content: "Mon-Thu: 11:00 AM - 11:00 PM\nFri-Sat: 11:00 AM - 12:00 AM\nSun: 11:00 AM - 10:00 PM"
     }
   ];
 
@@ -149,6 +150,28 @@ export default function ContactSection() {
                     <SelectItem value="Reservation">Reservation</SelectItem>
                     <SelectItem value="Private Events">Private Events</SelectItem>
                     <SelectItem value="Feedback">Feedback</SelectItem>
+                  </SelectContent>
+                </Select>
+              </div>
+
+              <div>
+                <label htmlFor="location" className="block text-sm font-medium text-pub-charcoal mb-2">
+                  Location
+                </label>
+                <Select
+                  value={formData.location}
+                  onValueChange={(value) => setFormData({ ...formData, location: value })}
+                >
+                  <SelectTrigger className="focus:ring-2 focus:ring-pub-amber">
+                    <SelectValue />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="Corporate HQ">Corporate HQ</SelectItem>
+                    <SelectItem value="Firkin on Yonge">Firkin on Yonge</SelectItem>
+                    <SelectItem value="Firkin on Queen">Firkin on Queen</SelectItem>
+                    <SelectItem value="Firkin on King">Firkin on King</SelectItem>
+                    <SelectItem value="Firkin on Bloor">Firkin on Bloor</SelectItem>
+                    <SelectItem value="Firkin on Danforth">Firkin on Danforth</SelectItem>
                   </SelectContent>
                 </Select>
               </div>

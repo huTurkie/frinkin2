@@ -44,7 +44,7 @@ export default function Footer() {
               Firkin Pubs
             </h3>
             <p className="text-gray-300 mb-6">
-              Authentic British pub experiences with traditional ales, hearty food, and warm hospitality since 1985.
+              Toronto's neighborhood pub experiences with traditional ales, hearty food, and warm hospitality since 1987.
             </p>
             <div className="flex space-x-4">
               <a href="#" className="text-gray-300 hover:text-pub-amber transition-colors duration-200">

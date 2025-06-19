@@ -2,7 +2,7 @@
 
 ## Overview
 
-This is a full-stack web application for Firkin Pubs, a British pub chain. The application provides a modern, responsive website showcasing multiple pub locations, menus, events, and contact functionality. It's built using a React frontend with a Node.js/Express backend, utilizing PostgreSQL for data persistence through Drizzle ORM.
+This is a full-stack web application for Firkin Pubs, a Toronto-based pub chain. The application provides a modern, responsive website showcasing multiple pub locations across Toronto and the GTA, menus, events, and contact functionality. It's built using a React frontend with a Node.js/Express backend, utilizing PostgreSQL for data persistence through Drizzle ORM.
 
 ## System Architecture
 
@@ -23,10 +23,10 @@ This is a full-stack web application for Firkin Pubs, a British pub chain. The a
 
 ### Database Schema
 The application uses four main entities:
-- **Locations**: Pub location details (name, address, rating, hours, status)
+- **Locations**: Pub location details (name, address, rating, hours, status) - Updated with real Toronto Firkin pub locations
 - **Menu Items**: Food and drink offerings with categories and pricing
 - **Events**: Pub events and entertainment (weekly, seasonal, special)
-- **Contacts**: Customer contact form submissions
+- **Contacts**: Customer contact form submissions with location selector
 
 ## Key Components
 
@@ -96,6 +96,11 @@ The application uses four main entities:
 ```
 Changelog:
 - June 19, 2025. Initial setup
+- June 19, 2025. Updated to reflect Toronto-based Firkin Pubs locations
+  - Added real Toronto pub locations (Yonge, Queen, King, Bloor, Danforth)
+  - Updated contact information to Markham, ON corporate headquarters
+  - Added location selector to contact form
+  - Updated branding to reflect Toronto pub chain since 1987
 ```
 
 ## User Preferences

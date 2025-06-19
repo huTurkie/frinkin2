@@ -38,6 +38,7 @@ export const contacts = pgTable("contacts", {
   name: text("name").notNull(),
   email: text("email").notNull(),
   subject: text("subject").notNull(),
+  location: text("location").notNull(),
   message: text("message").notNull(),
   createdAt: text("created_at").notNull(),
 });

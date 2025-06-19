@@ -33,7 +33,7 @@ export default function LocationsSection() {
             Find Your Local Firkin
           </h2>
           <p className="text-xl text-pub-gray max-w-3xl mx-auto">
-            Discover our collection of authentic British pubs across the region, each with its own unique character and charm.
+            Discover our collection of neighborhood pubs across Toronto and the GTA, each with its own unique character and charm.
           </p>
         </div>
 
