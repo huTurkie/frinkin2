@@ -1,0 +1,156 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap');
+
+:root {
+  --background: hsl(0, 0%, 100%);
+  --foreground: hsl(20, 14.3%, 4.1%);
+  --muted: hsl(60, 4.8%, 95.9%);
+  --muted-foreground: hsl(25, 5.3%, 44.7%);
+  --popover: hsl(0, 0%, 100%);
+  --popover-foreground: hsl(20, 14.3%, 4.1%);
+  --card: hsl(0, 0%, 100%);
+  --card-foreground: hsl(20, 14.3%, 4.1%);
+  --border: hsl(20, 5.9%, 90%);
+  --input: hsl(20, 5.9%, 90%);
+  --primary: hsl(207, 90%, 54%);
+  --primary-foreground: hsl(211, 100%, 99%);
+  --secondary: hsl(60, 4.8%, 95.9%);
+  --secondary-foreground: hsl(24, 9.8%, 10%);
+  --accent: hsl(60, 4.8%, 95.9%);
+  --accent-foreground: hsl(24, 9.8%, 10%);
+  --destructive: hsl(0, 84.2%, 60.2%);
+  --destructive-foreground: hsl(60, 9.1%, 97.8%);
+  --ring: hsl(20, 14.3%, 4.1%);
+  --radius: 0.5rem;
+
+  /* Firkin Pub Custom Colors */
+  --pub-amber: hsl(32, 95%, 44%);
+  --pub-brown: hsl(30, 63%, 27%);
+  --pub-cream: hsl(45, 73%, 89%);
+  --pub-gold: hsl(43, 89%, 49%);
+  --pub-green: hsl(158, 64%, 40%);
+  --pub-charcoal: hsl(220, 13%, 27%);
+  --pub-gray: hsl(220, 9%, 46%);
+}
+
+.dark {
+  --background: hsl(240, 10%, 3.9%);
+  --foreground: hsl(0, 0%, 98%);
+  --muted: hsl(240, 3.7%, 15.9%);
+  --muted-foreground: hsl(240, 5%, 64.9%);
+  --popover: hsl(240, 10%, 3.9%);
+  --popover-foreground: hsl(0, 0%, 98%);
+  --card: hsl(240, 10%, 3.9%);
+  --card-foreground: hsl(0, 0%, 98%);
+  --border: hsl(240, 3.7%, 15.9%);
+  --input: hsl(240, 3.7%, 15.9%);
+  --primary: hsl(207, 90%, 54%);
+  --primary-foreground: hsl(211, 100%, 99%);
+  --secondary: hsl(240, 3.7%, 15.9%);
+  --secondary-foreground: hsl(0, 0%, 98%);
+  --accent: hsl(240, 3.7%, 15.9%);
+  --accent-foreground: hsl(0, 0%, 98%);
+  --destructive: hsl(0, 62.8%, 30.6%);
+  --destructive-foreground: hsl(0, 0%, 98%);
+  --ring: hsl(240, 4.9%, 83.9%);
+  --radius: 0.5rem;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-inter antialiased bg-background text-foreground;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-playfair;
+  }
+}
+
+@layer utilities {
+  .font-playfair {
+    font-family: 'Playfair Display', serif;
+  }
+  
+  .font-inter {
+    font-family: 'Inter', sans-serif;
+  }
+  
+  .text-pub-amber {
+    color: var(--pub-amber);
+  }
+  
+  .text-pub-brown {
+    color: var(--pub-brown);
+  }
+  
+  .text-pub-cream {
+    color: var(--pub-cream);
+  }
+  
+  .text-pub-gold {
+    color: var(--pub-gold);
+  }
+  
+  .text-pub-green {
+    color: var(--pub-green);
+  }
+  
+  .text-pub-charcoal {
+    color: var(--pub-charcoal);
+  }
+  
+  .text-pub-gray {
+    color: var(--pub-gray);
+  }
+  
+  .bg-pub-amber {
+    background-color: var(--pub-amber);
+  }
+  
+  .bg-pub-brown {
+    background-color: var(--pub-brown);
+  }
+  
+  .bg-pub-cream {
+    background-color: var(--pub-cream);
+  }
+  
+  .bg-pub-gold {
+    background-color: var(--pub-gold);
+  }
+  
+  .bg-pub-green {
+    background-color: var(--pub-green);
+  }
+  
+  .bg-pub-charcoal {
+    background-color: var(--pub-charcoal);
+  }
+  
+  .bg-pub-gray {
+    background-color: var(--pub-gray);
+  }
+
+  .hover\:bg-pub-gold:hover {
+    background-color: var(--pub-gold);
+  }
+
+  .hover\:text-pub-amber:hover {
+    color: var(--pub-amber);
+  }
+
+  .hover\:text-pub-gold:hover {
+    color: var(--pub-gold);
+  }
+
+  .border-pub-cream {
+    border-color: var(--pub-cream);
+  }
+}
