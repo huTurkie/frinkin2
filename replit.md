@@ -101,6 +101,12 @@ Changelog:
   - Updated contact information to Markham, ON corporate headquarters
   - Added location selector to contact form
   - Updated branding to reflect Toronto pub chain since 1987
+- June 19, 2025. Implemented authentic Canadian pub menu with CAD pricing
+  - Complete menu overhaul with Canadian pub staples
+  - Changed currency from GBP (£) to CAD ($)
+  - Added authentic items: Firkin Burger, Wings, Nachos, Caesar cocktails
+  - Organized menu into proper categories: Mains, Appetizers, Salads, Beer, Wine, Cocktails
+  - Updated menu descriptions to reflect Canadian pub offerings
 ```
 
 ## User Preferences

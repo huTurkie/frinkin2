@@ -31,13 +31,14 @@ export default function MenuSection() {
   const getSubcategoryTitle = (subcategory: string) => {
     const titles: Record<string, string> = {
       mains: "Main Courses",
-      "pub-favorites": "Pub Favorites",
-      ales: "Ales & Beers",
-      wines: "Wines & Spirits",
-      spirits: "Wines & Spirits",
-      soft: "Soft Drinks",
-      traditional: "Traditional Desserts",
-      cheese: "Cheese Selection"
+      appetizers: "Appetizers",
+      salads: "Salads & Light Options",
+      sandwiches: "Sandwiches",
+      beer: "Beer",
+      wine: "Wine",
+      cocktails: "Cocktails",
+      soft: "Non-Alcoholic",
+      traditional: "Traditional Desserts"
     };
     return titles[subcategory] || subcategory.charAt(0).toUpperCase() + subcategory.slice(1);
   };
@@ -50,7 +51,7 @@ export default function MenuSection() {
             Our Menu
           </h2>
           <p className="text-xl text-pub-gray max-w-3xl mx-auto">
-            Traditional British pub fare made with locally sourced ingredients and time-honored recipes.
+            Authentic Canadian pub fare made with locally sourced ingredients and classic recipes.
           </p>
         </div>
 
@@ -97,7 +98,7 @@ export default function MenuSection() {
                           </p>
                         </div>
                         <span className="font-semibold text-pub-amber ml-4">
-                          £{item.price}
+                          ${item.price}
                         </span>
                       </div>
                     ))}
@@ -126,32 +127,35 @@ export default function MenuSection() {
                   <h3 className="font-playfair text-2xl font-semibold text-pub-brown mb-6">
                     {getSubcategoryTitle(subcategory)}
                   </h3>
-                  {subcategory === "ales" && (
+                  {subcategory === "beer" && (
                     <img
                       src="https://images.unsplash.com/photo-1436076863939-06870fe779c2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600"
-                      alt="Craft beer taps"
+                      alt="Beer taps"
                       className="w-full h-48 object-cover rounded-lg mb-6"
                     />
                   )}
-                  {(subcategory === "wines" || subcategory === "spirits") && (
+                  {(subcategory === "wine" || subcategory === "cocktails") && (
                     <img
                       src="https://images.unsplash.com/photo-1506368249639-73a05d6f6488?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600"
-                      alt="Wine and spirits collection"
+                      alt="Wine and cocktails"
                       className="w-full h-48 object-cover rounded-lg mb-6"
                     />
                   )}
                   {subcategory === "soft" && (
                     <img
                       src="https://images.unsplash.com/photo-1544145945-f90425340c7e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600"
-                      alt="Soft drinks selection"
+                      alt="Non-alcoholic drinks"
                       className="w-full h-48 object-cover rounded-lg mb-6"
                     />
                   )}
                   <div className="space-y-4">
                     {items.map((item) => (
-                      <div key={item.id} className="flex justify-between">
-                        <span>{item.name}</span>
-                        <span className="text-pub-amber">£{item.price}</span>
+                      <div key={item.id} className="flex justify-between items-start">
+                        <div className="flex-1">
+                          <div className="font-medium">{item.name}</div>
+                          <div className="text-sm text-pub-gray">{item.description}</div>
+                        </div>
+                        <span className="text-pub-amber font-semibold ml-4">${item.price}</span>
                       </div>
                     ))}
                   </div>
@@ -169,7 +173,7 @@ export default function MenuSection() {
                     {item.description}
                   </p>
                   <span className="font-semibold text-pub-amber text-lg">
-                    £{item.price}
+                    ${item.price}
                   </span>
                 </div>
               ))}

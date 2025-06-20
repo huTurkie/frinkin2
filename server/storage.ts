@@ -99,137 +99,235 @@ export class MemStorage implements IStorage {
 
     sampleLocations.forEach(location => this.createLocation(location));
 
-    // Seed menu items
+    // Seed menu items - Authentic Canadian Pub Menu
     const sampleMenuItems: InsertMenuItem[] = [
-      // Food - Main Courses
+      // Food - Mains
       {
-        name: "Traditional Fish & Chips",
-        description: "Beer-battered cod with hand-cut chips, mushy peas, and tartar sauce",
-        price: "14.95",
+        name: "Fish & Chips",
+        description: "Beer battered haddock with hand-cut fries, coleslaw, and tartar sauce",
+        price: "18.99",
         category: "food",
         subcategory: "mains",
         image: "https://images.unsplash.com/photo-1544982503-9f984c14501a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600"
       },
       {
+        name: "Firkin Burger",
+        description: "8oz certified Angus beef patty, bacon, cheese, lettuce, tomato, onion, pickle, served with fries",
+        price: "17.99",
+        category: "food",
+        subcategory: "mains",
+        image: "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600"
+      },
+      {
+        name: "Steak & Kidney Pie",
+        description: "Traditional pie filled with tender beef and kidney in rich gravy, served with mashed potatoes",
+        price: "19.99",
+        category: "food",
+        subcategory: "mains",
+        image: null
+      },
+      {
+        name: "Bangers & Mash",
+        description: "Traditional British sausages with mashed potatoes and onion gravy",
+        price: "16.99",
+        category: "food",
+        subcategory: "mains",
+        image: null
+      },
+      {
         name: "Shepherd's Pie",
-        description: "Slow-cooked lamb mince with vegetables, topped with creamy mashed potato",
-        price: "13.50",
+        description: "Ground lamb with vegetables topped with mashed potatoes and cheese",
+        price: "18.99",
         category: "food",
         subcategory: "mains",
         image: "https://images.unsplash.com/photo-1574484284002-952d92456975?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600"
       },
       {
-        name: "Bangers & Mash",
-        description: "Local Cumberland sausages with buttery mashed potato and onion gravy",
-        price: "12.95",
+        name: "Chicken Tikka Masala",
+        description: "Tender chicken in creamy tomato curry sauce, served with basmati rice and naan",
+        price: "19.99",
         category: "food",
         subcategory: "mains",
         image: null
       },
       {
-        name: "Steak & Kidney Pie",
-        description: "Tender beef and kidney in rich gravy, encased in golden pastry",
-        price: "15.95",
+        name: "Beer Battered Chicken",
+        description: "Crispy beer battered chicken breast with honey mustard dip and fries",
+        price: "17.99",
         category: "food",
         subcategory: "mains",
         image: null
       },
-      // Food - Pub Favorites
+      // Food - Appetizers
       {
-        name: "Ploughman's Lunch",
-        description: "Local cheeses, ham, pickles, crusty bread, and apple",
-        price: "10.95",
+        name: "Wings",
+        description: "1 lb chicken wings with choice of sauce: hot, mild, BBQ, honey garlic, or salt & pepper",
+        price: "14.99",
         category: "food",
-        subcategory: "pub-favorites",
+        subcategory: "appetizers",
         image: null
       },
       {
-        name: "Beef & Ale Casserole",
-        description: "Slow-cooked beef in local ale with root vegetables",
-        price: "16.50",
+        name: "Nachos",
+        description: "Tortilla chips loaded with cheese, jalapeños, tomatoes, green onions, sour cream, and salsa",
+        price: "13.99",
         category: "food",
-        subcategory: "pub-favorites",
+        subcategory: "appetizers",
         image: null
       },
       {
-        name: "Sunday Roast",
-        description: "Choice of roast beef, lamb, or chicken with Yorkshire pudding",
-        price: "17.95",
+        name: "Potato Skins",
+        description: "Crispy potato skins loaded with bacon, cheese, and green onions, served with sour cream",
+        price: "11.99",
         category: "food",
-        subcategory: "pub-favorites",
-        image: null
-      },
-      // Drinks - Ales & Beers
-      {
-        name: "Firkin Bitter",
-        description: "Our signature house bitter with hoppy finish",
-        price: "4.20",
-        category: "drinks",
-        subcategory: "ales",
+        subcategory: "appetizers",
         image: null
       },
       {
-        name: "London Pride",
-        description: "Classic English bitter with malty sweetness",
-        price: "4.50",
-        category: "drinks",
-        subcategory: "ales",
+        name: "Mozzarella Sticks",
+        description: "Golden fried mozzarella sticks served with marinara sauce",
+        price: "10.99",
+        category: "food",
+        subcategory: "appetizers",
+        image: null
+      },
+      // Food - Salads & Lighter Options
+      {
+        name: "Caesar Salad",
+        description: "Crisp romaine lettuce, bacon bits, parmesan cheese, croutons, and Caesar dressing",
+        price: "12.99",
+        category: "food",
+        subcategory: "salads",
         image: null
       },
       {
-        name: "Guest Ale",
-        description: "Rotating selection of local craft ales",
-        price: "4.80",
-        category: "drinks",
-        subcategory: "ales",
+        name: "Chicken Caesar Wrap",
+        description: "Grilled chicken, romaine lettuce, parmesan, and Caesar dressing in a flour tortilla",
+        price: "14.99",
+        category: "food",
+        subcategory: "salads",
         image: null
       },
-      // Drinks - Wines & Spirits
+      {
+        name: "Club Sandwich",
+        description: "Triple-decker with turkey, bacon, lettuce, tomato, and mayo, served with fries",
+        price: "15.99",
+        category: "food",
+        subcategory: "sandwiches",
+        image: null
+      },
+      // Drinks - Beer
+      {
+        name: "Canadian",
+        description: "Classic Canadian lager - smooth and refreshing",
+        price: "6.50",
+        category: "drinks",
+        subcategory: "beer",
+        image: null
+      },
+      {
+        name: "Guinness",
+        description: "Rich Irish stout with creamy head",
+        price: "7.25",
+        category: "drinks",
+        subcategory: "beer",
+        image: null
+      },
+      {
+        name: "Steam Whistle",
+        description: "Premium Toronto pilsner",
+        price: "6.75",
+        category: "drinks",
+        subcategory: "beer",
+        image: null
+      },
+      {
+        name: "Stella Artois",
+        description: "Belgian lager with crisp finish",
+        price: "6.75",
+        category: "drinks",
+        subcategory: "beer",
+        image: null
+      },
+      {
+        name: "Keith's IPA",
+        description: "Maritime India Pale Ale with hoppy character",
+        price: "6.50",
+        category: "drinks",
+        subcategory: "beer",
+        image: null
+      },
+      // Drinks - Wine
       {
         name: "House Red Wine",
-        description: "Smooth and fruity house selection",
-        price: "5.50",
+        description: "6oz glass of our featured red wine",
+        price: "8.50",
         category: "drinks",
-        subcategory: "wines",
+        subcategory: "wine",
         image: null
       },
       {
-        name: "Single Malt Whisky",
-        description: "Premium Scottish single malt selection",
-        price: "6.20",
+        name: "House White Wine",
+        description: "6oz glass of our featured white wine",
+        price: "8.50",
         category: "drinks",
-        subcategory: "spirits",
+        subcategory: "wine",
         image: null
       },
       {
-        name: "Premium Gin & Tonic",
-        description: "Craft gin with premium tonic and garnish",
-        price: "7.50",
+        name: "Pinot Grigio",
+        description: "Light and crisp Italian white wine",
+        price: "9.50",
         category: "drinks",
-        subcategory: "spirits",
+        subcategory: "wine",
         image: null
       },
-      // Drinks - Soft Drinks
+      // Drinks - Cocktails
       {
-        name: "Fresh Orange Juice",
-        description: "Freshly squeezed orange juice",
-        price: "2.50",
+        name: "Caesar",
+        description: "Canada's national cocktail with vodka, clamato, and spices",
+        price: "9.99",
+        category: "drinks",
+        subcategory: "cocktails",
+        image: null
+      },
+      {
+        name: "Rye & Ginger",
+        description: "Canadian rye whisky with ginger ale",
+        price: "8.99",
+        category: "drinks",
+        subcategory: "cocktails",
+        image: null
+      },
+      {
+        name: "Old Fashioned",
+        description: "Classic whisky cocktail with bitters and orange",
+        price: "11.99",
+        category: "drinks",
+        subcategory: "cocktails",
+        image: null
+      },
+      // Drinks - Non-Alcoholic
+      {
+        name: "Soft Drinks",
+        description: "Coke, Pepsi, Sprite, Orange, Root Beer",
+        price: "3.50",
         category: "drinks",
         subcategory: "soft",
         image: null
       },
       {
-        name: "Traditional Lemonade",
-        description: "House-made traditional lemonade",
-        price: "2.20",
+        name: "Coffee",
+        description: "Freshly brewed regular or decaf",
+        price: "3.25",
         category: "drinks",
         subcategory: "soft",
         image: null
       },
       {
-        name: "Coffee & Tea",
-        description: "Freshly brewed coffee or selection of teas",
-        price: "2.80",
+        name: "Hot Tea",
+        description: "Selection of premium teas",
+        price: "3.25",
         category: "drinks",
         subcategory: "soft",
         image: null
@@ -237,26 +335,26 @@ export class MemStorage implements IStorage {
       // Desserts
       {
         name: "Sticky Toffee Pudding",
-        description: "Warm sponge pudding with toffee sauce and vanilla ice cream",
-        price: "6.95",
+        description: "Warm sponge cake with toffee sauce and vanilla ice cream",
+        price: "8.99",
         category: "desserts",
         subcategory: "traditional",
         image: null
       },
       {
-        name: "Apple Crumble",
-        description: "Traditional apple crumble with custard or cream",
-        price: "6.50",
+        name: "Chocolate Brownie",
+        description: "Warm chocolate brownie with vanilla ice cream and chocolate sauce",
+        price: "7.99",
         category: "desserts",
         subcategory: "traditional",
         image: null
       },
       {
-        name: "Cheese Board",
-        description: "Selection of British cheeses with crackers and chutney",
-        price: "8.95",
+        name: "Apple Crisp",
+        description: "Traditional apple crisp with cinnamon and vanilla ice cream",
+        price: "7.99",
         category: "desserts",
-        subcategory: "cheese",
+        subcategory: "traditional",
         image: null
       }
     ];
