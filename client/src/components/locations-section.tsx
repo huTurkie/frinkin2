@@ -81,12 +81,16 @@ export default function LocationsSection() {
                     </span>
                   </div>
                   <div className="flex justify-between items-center">
-                    <span className="text-pub-green font-semibold bg-green-50 px-3 py-1 rounded-full text-sm">
+                    <span className="text-pub-green font-semibold bg-green-50 px-4 py-2 rounded-2xl text-sm border border-green-200">
                       {location.status}
                     </span>
-                    <button className="group bg-pub-amber hover:bg-pub-gold text-white px-4 py-2 rounded-full font-semibold transition-all duration-300 transform hover:scale-105">
-                      <span className="mr-1">Visit</span>
-                      <span className="inline-block transition-transform group-hover:translate-x-1">→</span>
+                    <button className="group relative bg-gradient-to-r from-pub-amber to-pub-gold hover:from-pub-gold hover:to-pub-amber text-white px-6 py-3 rounded-2xl font-bold transition-all duration-500 transform hover:scale-110 hover:-translate-y-1 shadow-lg hover:shadow-xl overflow-hidden">
+                      <div className="absolute inset-0 bg-gradient-to-r from-white/20 via-transparent to-white/10 rounded-2xl"></div>
+                      <span className="relative z-10 flex items-center">
+                        <span className="mr-2">Visit</span>
+                        <span className="inline-block transition-transform group-hover:translate-x-2 duration-300">→</span>
+                      </span>
+                      <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-3/4 h-0.5 bg-white/40 rounded-full"></div>
                     </button>
                   </div>
                 </CardContent>

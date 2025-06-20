@@ -40,17 +40,25 @@ export default function HeroSection() {
         <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
           <button
             onClick={() => scrollToSection("locations")}
-            className="group bg-pub-amber hover:bg-pub-gold text-white px-10 py-5 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
+            className="group relative bg-gradient-to-r from-pub-amber via-pub-gold to-pub-amber hover:from-pub-gold hover:via-pub-amber hover:to-pub-gold text-white px-12 py-6 rounded-2xl font-bold text-lg transition-all duration-500 transform hover:scale-110 hover:-translate-y-2 shadow-2xl hover:shadow-3xl overflow-hidden"
           >
-            <span className="mr-2">Find a Location</span>
-            <span className="inline-block transition-transform group-hover:translate-x-1">→</span>
+            <div className="absolute inset-0 bg-gradient-to-r from-white/20 via-transparent to-white/10 rounded-2xl"></div>
+            <span className="relative z-10 flex items-center">
+              <span className="mr-3">Find a Location</span>
+              <span className="inline-block transition-transform group-hover:translate-x-2 duration-300">→</span>
+            </span>
+            <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-3/4 h-1 bg-white/40 rounded-full"></div>
           </button>
           <button
             onClick={() => scrollToSection("menu")}
-            className="group border-2 border-white text-white hover:bg-white hover:text-pub-brown px-10 py-5 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 backdrop-blur-sm"
+            className="group relative bg-white/10 backdrop-blur-md border-2 border-white/30 text-white hover:bg-white hover:text-pub-brown px-12 py-6 rounded-2xl font-bold text-lg transition-all duration-500 transform hover:scale-110 hover:-translate-y-2 shadow-2xl hover:shadow-3xl overflow-hidden"
           >
-            <span className="mr-2">View Menu</span>
-            <span className="inline-block transition-transform group-hover:translate-x-1">→</span>
+            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent group-hover:from-white group-hover:via-white group-hover:to-white transition-all duration-500 rounded-2xl"></div>
+            <span className="relative z-10 flex items-center">
+              <span className="mr-3">View Menu</span>
+              <span className="inline-block transition-transform group-hover:translate-x-2 duration-300">→</span>
+            </span>
+            <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-0 group-hover:w-3/4 h-1 bg-pub-amber rounded-full transition-all duration-500"></div>
           </button>
         </div>
         

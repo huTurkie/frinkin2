@@ -63,22 +63,43 @@ export default function MenuSection() {
         </div>
 
         {/* Menu Categories */}
-        <div className="flex flex-wrap justify-center gap-4 mb-16">
+        <div className="flex flex-wrap justify-center gap-6 mb-16">
           {categories.map((category) => (
             <button
               key={category.id}
               onClick={() => setActiveCategory(category.id)}
               className={cn(
-                "group px-8 py-4 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 relative overflow-hidden",
+                "group relative px-10 py-5 rounded-2xl font-bold text-lg transition-all duration-500 transform hover:scale-110 hover:-translate-y-1 shadow-xl hover:shadow-2xl overflow-hidden",
                 activeCategory === category.id
-                  ? "bg-gradient-to-r from-pub-amber to-pub-gold text-white shadow-xl"
-                  : "bg-white text-pub-charcoal hover:bg-pub-cream border-2 border-pub-cream hover:border-pub-amber shadow-lg"
+                  ? "bg-gradient-to-br from-pub-amber via-pub-gold to-pub-amber text-white shadow-2xl border-2 border-pub-gold/50"
+                  : "bg-gradient-to-br from-white to-gray-50 text-pub-charcoal hover:from-pub-cream hover:to-white border-2 border-gray-200 hover:border-pub-amber/30"
               )}
             >
-              <span className="relative z-10">{category.label}</span>
+              {/* Gradient overlay for inactive buttons */}
               {activeCategory !== category.id && (
-                <div className="absolute inset-0 bg-gradient-to-r from-pub-amber to-pub-gold opacity-0 group-hover:opacity-10 transition-opacity duration-300"></div>
+                <div className="absolute inset-0 bg-gradient-to-br from-pub-amber/0 via-pub-gold/0 to-pub-amber/0 group-hover:from-pub-amber/5 group-hover:via-pub-gold/10 group-hover:to-pub-amber/5 transition-all duration-500"></div>
               )}
+              
+              {/* Active button glow effect */}
+              {activeCategory === category.id && (
+                <div className="absolute inset-0 bg-gradient-to-br from-white/20 via-transparent to-white/10 rounded-2xl"></div>
+              )}
+              
+              {/* Button content */}
+              <span className="relative z-10 flex items-center justify-center">
+                {category.label}
+                {activeCategory === category.id && (
+                  <span className="ml-2 w-2 h-2 bg-white rounded-full animate-pulse"></span>
+                )}
+              </span>
+              
+              {/* Bottom highlight */}
+              <div className={cn(
+                "absolute bottom-0 left-1/2 transform -translate-x-1/2 h-1 rounded-full transition-all duration-500",
+                activeCategory === category.id
+                  ? "w-3/4 bg-white/40"
+                  : "w-0 bg-pub-amber group-hover:w-1/2"
+              )}></div>
             </button>
           ))}
         </div>
