@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Instagram, Twitter, Facebook } from "lucide-react";
 import { scrollToSection } from "@/lib/utils";
 
 export default function Navigation() {
@@ -53,12 +53,40 @@ export default function Navigation() {
               Events
               <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-pub-amber transition-all duration-300 group-hover:w-full"></span>
             </button>
-            <button
-              onClick={() => handleNavClick("contact")}
-              className="bg-pub-amber hover:bg-pub-gold text-white px-6 py-2 rounded-full font-semibold transition-all duration-300 transform hover:scale-105"
-            >
-              Contact
-            </button>
+            <div className="flex items-center space-x-4">
+              <div className="flex items-center space-x-2">
+                <a 
+                  href="https://www.instagram.com/firkinpubs/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-pub-charcoal hover:text-pub-amber transition-colors duration-300 p-1"
+                >
+                  <Instagram className="w-5 h-5" />
+                </a>
+                <a 
+                  href="https://x.com/FirkinPubs" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-pub-charcoal hover:text-pub-amber transition-colors duration-300 p-1"
+                >
+                  <Twitter className="w-5 h-5" />
+                </a>
+                <a 
+                  href="https://www.facebook.com/firkinpubs" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-pub-charcoal hover:text-pub-amber transition-colors duration-300 p-1"
+                >
+                  <Facebook className="w-5 h-5" />
+                </a>
+              </div>
+              <button
+                onClick={() => handleNavClick("contact")}
+                className="bg-pub-amber hover:bg-pub-gold text-white px-6 py-2 rounded-full font-semibold transition-all duration-300 transform hover:scale-105"
+              >
+                Contact
+              </button>
+            </div>
           </div>
 
           {/* Mobile menu button */}
@@ -107,6 +135,37 @@ export default function Navigation() {
             >
               Contact
             </button>
+            
+            {/* Mobile Social Media */}
+            <div className="border-t border-pub-cream mt-4 pt-4">
+              <div className="flex justify-center space-x-6 pb-2">
+                <a 
+                  href="https://www.instagram.com/firkinpubs/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-pub-charcoal hover:text-pub-amber transition-colors duration-300 p-2"
+                >
+                  <Instagram className="w-6 h-6" />
+                </a>
+                <a 
+                  href="https://x.com/FirkinPubs" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-pub-charcoal hover:text-pub-amber transition-colors duration-300 p-2"
+                >
+                  <Twitter className="w-6 h-6" />
+                </a>
+                <a 
+                  href="https://www.facebook.com/firkinpubs" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-pub-charcoal hover:text-pub-amber transition-colors duration-300 p-2"
+                >
+                  <Facebook className="w-6 h-6" />
+                </a>
+              </div>
+              <p className="text-center text-sm text-pub-gray">Follow us for updates & events</p>
+            </div>
           </div>
         </div>
       )}

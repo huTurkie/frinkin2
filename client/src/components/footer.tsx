@@ -47,13 +47,28 @@ export default function Footer() {
               Toronto's neighborhood pub experiences with traditional ales, hearty food, and warm hospitality since 1987.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-gray-300 hover:text-pub-amber transition-colors duration-200">
+              <a 
+                href="https://x.com/FirkinPubs" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-gray-300 hover:text-pub-amber transition-colors duration-200"
+              >
                 <Twitter className="w-6 h-6" />
               </a>
-              <a href="#" className="text-gray-300 hover:text-pub-amber transition-colors duration-200">
+              <a 
+                href="https://www.facebook.com/firkinpubs" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-gray-300 hover:text-pub-amber transition-colors duration-200"
+              >
                 <Facebook className="w-6 h-6" />
               </a>
-              <a href="#" className="text-gray-300 hover:text-pub-amber transition-colors duration-200">
+              <a 
+                href="https://www.instagram.com/firkinpubs/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-gray-300 hover:text-pub-amber transition-colors duration-200"
+              >
                 <Instagram className="w-6 h-6" />
               </a>
             </div>
