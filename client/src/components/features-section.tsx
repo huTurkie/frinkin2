@@ -7,7 +7,7 @@ export default function FeaturesSection() {
       icon: Building,
       title: "Toronto Locations",
       description: "Strategic locations across Toronto's vibrant neighborhoods, each offering a unique local atmosphere and character.",
-      image: "https://images.unsplash.com/photo-1519167758481-83f29c75b5c0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600"
+      image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600"
     },
     {
       icon: Beer,
