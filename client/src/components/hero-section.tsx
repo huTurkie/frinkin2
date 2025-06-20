@@ -13,8 +13,10 @@ export default function HeroSection() {
       <div className="absolute inset-0 bg-gradient-to-br from-black/70 via-black/50 to-pub-brown/60" />
       
       {/* Floating Elements */}
-      <div className="absolute top-20 left-10 w-20 h-20 bg-pub-amber/20 rounded-full blur-xl animate-pulse"></div>
-      <div className="absolute bottom-32 right-16 w-32 h-32 bg-pub-gold/15 rounded-full blur-2xl animate-pulse delay-1000"></div>
+      <div className="absolute top-20 left-10 w-20 h-20 bg-pub-amber/20 rounded-full blur-xl animate-float"></div>
+      <div className="absolute bottom-32 right-16 w-32 h-32 bg-pub-gold/15 rounded-full blur-2xl animate-float delay-1000"></div>
+      <div className="absolute top-1/3 right-1/4 w-4 h-4 bg-pub-amber rounded-full animate-pulse-slow"></div>
+      <div className="absolute bottom-1/4 left-1/3 w-6 h-6 bg-pub-gold/30 rounded-full animate-pulse-slow delay-500"></div>
       
       <div className="relative z-10 text-center text-white max-w-6xl mx-auto px-4">
         {/* Logo/Brand Element */}
@@ -40,10 +42,13 @@ export default function HeroSection() {
         <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
           <button
             onClick={() => scrollToSection("locations")}
-            className="group relative bg-gradient-to-r from-pub-amber via-pub-gold to-pub-amber hover:from-pub-gold hover:via-pub-amber hover:to-pub-gold text-white px-12 py-6 rounded-2xl font-bold text-lg transition-all duration-500 transform hover:scale-110 hover:-translate-y-2 shadow-2xl hover:shadow-3xl overflow-hidden"
+            className="group relative btn-gradient-primary text-white px-12 py-6 rounded-2xl font-bold text-lg transition-all duration-500 transform hover:scale-110 hover:-translate-y-3 shadow-2xl hover:shadow-glow-gold overflow-hidden"
           >
             <div className="absolute inset-0 bg-gradient-to-r from-white/20 via-transparent to-white/10 rounded-2xl"></div>
             <span className="relative z-10 flex items-center">
+              <svg className="w-5 h-5 mr-3 transition-transform group-hover:rotate-12" fill="currentColor" viewBox="0 0 20 20">
+                <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
+              </svg>
               <span className="mr-3">Find a Location</span>
               <span className="inline-block transition-transform group-hover:translate-x-2 duration-300">→</span>
             </span>
@@ -51,10 +56,13 @@ export default function HeroSection() {
           </button>
           <button
             onClick={() => scrollToSection("menu")}
-            className="group relative bg-white/10 backdrop-blur-md border-2 border-white/30 text-white hover:bg-white hover:text-pub-brown px-12 py-6 rounded-2xl font-bold text-lg transition-all duration-500 transform hover:scale-110 hover:-translate-y-2 shadow-2xl hover:shadow-3xl overflow-hidden"
+            className="group relative btn-glass border-2 border-white/30 text-white hover:bg-white hover:text-pub-brown px-12 py-6 rounded-2xl font-bold text-lg transition-all duration-500 transform hover:scale-110 hover:-translate-y-3 shadow-2xl hover:shadow-glow overflow-hidden"
           >
             <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent group-hover:from-white group-hover:via-white group-hover:to-white transition-all duration-500 rounded-2xl"></div>
             <span className="relative z-10 flex items-center">
+              <svg className="w-5 h-5 mr-3 transition-transform group-hover:rotate-12" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
               <span className="mr-3">View Menu</span>
               <span className="inline-block transition-transform group-hover:translate-x-2 duration-300">→</span>
             </span>

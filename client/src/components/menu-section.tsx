@@ -64,20 +64,25 @@ export default function MenuSection() {
 
         {/* Menu Categories */}
         <div className="flex flex-wrap justify-center gap-6 mb-16">
-          {categories.map((category) => (
+          {categories.map((category, index) => (
             <button
               key={category.id}
               onClick={() => setActiveCategory(category.id)}
               className={cn(
-                "group relative px-10 py-5 rounded-2xl font-bold text-lg transition-all duration-500 transform hover:scale-110 hover:-translate-y-1 shadow-xl hover:shadow-2xl overflow-hidden",
+                "group relative px-10 py-5 rounded-2xl font-bold text-lg transition-all duration-500 transform hover:scale-110 hover:-translate-y-2 shadow-xl hover:shadow-glow overflow-hidden",
                 activeCategory === category.id
-                  ? "bg-gradient-to-br from-pub-amber via-pub-gold to-pub-amber text-white shadow-2xl border-2 border-pub-gold/50"
-                  : "bg-gradient-to-br from-white to-gray-50 text-pub-charcoal hover:from-pub-cream hover:to-white border-2 border-gray-200 hover:border-pub-amber/30"
+                  ? "btn-gradient-primary text-white shadow-glow-gold border-2 border-pub-gold/50"
+                  : "bg-gradient-to-br from-white via-pub-cream/30 to-white text-pub-charcoal hover:from-pub-cream hover:to-white border-2 border-gray-200 hover:border-pub-amber/50"
               )}
             >
+              {/* Shimmer effect for active button */}
+              {activeCategory === category.id && (
+                <div className="absolute inset-0 animate-shimmer rounded-2xl"></div>
+              )}
+              
               {/* Gradient overlay for inactive buttons */}
               {activeCategory !== category.id && (
-                <div className="absolute inset-0 bg-gradient-to-br from-pub-amber/0 via-pub-gold/0 to-pub-amber/0 group-hover:from-pub-amber/5 group-hover:via-pub-gold/10 group-hover:to-pub-amber/5 transition-all duration-500"></div>
+                <div className="absolute inset-0 bg-gradient-to-br from-pub-amber/0 via-pub-gold/0 to-pub-amber/0 group-hover:from-pub-amber/10 group-hover:via-pub-gold/15 group-hover:to-pub-amber/10 transition-all duration-500 rounded-2xl"></div>
               )}
               
               {/* Active button glow effect */}
@@ -85,8 +90,23 @@ export default function MenuSection() {
                 <div className="absolute inset-0 bg-gradient-to-br from-white/20 via-transparent to-white/10 rounded-2xl"></div>
               )}
               
-              {/* Button content */}
+              {/* Button content with icons */}
               <span className="relative z-10 flex items-center justify-center">
+                {category.id === "food" && (
+                  <svg className="w-5 h-5 mr-2 transition-transform group-hover:rotate-12" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z" />
+                  </svg>
+                )}
+                {category.id === "drinks" && (
+                  <svg className="w-5 h-5 mr-2 transition-transform group-hover:rotate-12" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M6 8V5c0-1.1.9-2 2-2h4c1.1 0 2 .9 2 2v3h2c.6 0 1 .4 1 1v6c0 1.1-.9 2-2 2H5c-1.1 0-2-.9-2-2V9c0-.6.4-1 1-1h2zm2-3v3h4V5H8z" clipRule="evenodd" />
+                  </svg>
+                )}
+                {category.id === "desserts" && (
+                  <svg className="w-5 h-5 mr-2 transition-transform group-hover:rotate-12" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M10 2L3 7v11a1 1 0 001 1h12a1 1 0 001-1V7l-7-5zM8 15a1 1 0 01-1-1v-4a1 1 0 112 0v4a1 1 0 01-1 1zm4 0a1 1 0 01-1-1v-4a1 1 0 112 0v4a1 1 0 01-1 1z" />
+                  </svg>
+                )}
                 {category.label}
                 {activeCategory === category.id && (
                   <span className="ml-2 w-2 h-2 bg-white rounded-full animate-pulse"></span>

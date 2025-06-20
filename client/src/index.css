@@ -153,4 +153,98 @@
   .border-pub-cream {
     border-color: var(--pub-cream);
   }
+
+  .border-pub-amber {
+    border-color: var(--pub-amber);
+  }
+
+  .border-pub-gold {
+    border-color: var(--pub-gold);
+  }
+
+  /* Enhanced Button Styles */
+  .btn-gradient-primary {
+    background: linear-gradient(135deg, var(--pub-amber) 0%, var(--pub-gold) 50%, var(--pub-amber) 100%);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .btn-gradient-primary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+    transition: left 0.6s;
+  }
+
+  .btn-gradient-primary:hover::before {
+    left: 100%;
+  }
+
+  .btn-glass {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .btn-glass:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+  }
+
+  /* Enhanced Shadows */
+  .shadow-3xl {
+    box-shadow: 0 35px 60px -12px rgba(0, 0, 0, 0.25);
+  }
+
+  .shadow-glow {
+    box-shadow: 0 0 20px rgba(var(--pub-amber), 0.3);
+  }
+
+  .shadow-glow-gold {
+    box-shadow: 0 0 30px rgba(var(--pub-gold), 0.4);
+  }
+
+  /* Animation Classes */
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  .animate-pulse-slow {
+    animation: pulse 4s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+  }
+
+  @keyframes shimmer {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+  }
+
+  .animate-shimmer {
+    background: linear-gradient(90deg, transparent 25%, rgba(255,255,255,0.3) 50%, transparent 75%);
+    background-size: 200% 100%;
+    animation: shimmer 2s infinite;
+  }
+
+  /* Gradient Borders */
+  .border-gradient {
+    border: 2px solid;
+    border-image: linear-gradient(45deg, var(--pub-amber), var(--pub-gold)) 1;
+  }
+
+  /* Enhanced Hover Effects */
+  .hover-lift {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .hover-lift:hover {
+    transform: translateY(-8px) scale(1.02);
+  }
 }

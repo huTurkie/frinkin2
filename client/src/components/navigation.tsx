@@ -82,10 +82,16 @@ export default function Navigation() {
               </div>
               <button
                 onClick={() => handleNavClick("contact")}
-                className="group relative bg-gradient-to-r from-pub-amber to-pub-gold hover:from-pub-gold hover:to-pub-amber text-white px-8 py-3 rounded-2xl font-bold transition-all duration-500 transform hover:scale-110 hover:-translate-y-1 shadow-lg hover:shadow-xl overflow-hidden"
+                className="group relative btn-gradient-primary text-white px-8 py-3 rounded-2xl font-bold transition-all duration-500 transform hover:scale-110 hover:-translate-y-2 shadow-lg hover:shadow-glow overflow-hidden"
               >
                 <div className="absolute inset-0 bg-gradient-to-r from-white/20 via-transparent to-white/10 rounded-2xl"></div>
-                <span className="relative z-10">Contact</span>
+                <span className="relative z-10 flex items-center">
+                  <svg className="w-4 h-4 mr-2 transition-transform group-hover:rotate-12" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+                    <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+                  </svg>
+                  Contact Us
+                </span>
                 <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-3/4 h-0.5 bg-white/40 rounded-full"></div>
               </button>
             </div>

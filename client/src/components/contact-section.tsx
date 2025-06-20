@@ -67,13 +67,20 @@ export default function ContactSection() {
   ];
 
   return (
-    <section id="contact" className="py-20 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="font-playfair text-4xl md:text-5xl font-bold text-pub-brown mb-4">
+    <section id="contact" className="py-24 bg-gradient-to-br from-white to-pub-cream/20 relative overflow-hidden">
+      {/* Background Elements */}
+      <div className="absolute top-20 right-10 w-72 h-72 bg-pub-amber/5 rounded-full blur-3xl"></div>
+      <div className="absolute bottom-10 left-10 w-96 h-96 bg-pub-gold/5 rounded-full blur-3xl"></div>
+      
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+        <div className="text-center mb-20">
+          <div className="inline-block mb-4">
+            <span className="text-pub-amber font-semibold tracking-wider uppercase text-sm">Let's Connect</span>
+          </div>
+          <h2 className="font-playfair text-5xl md:text-6xl font-bold text-pub-brown mb-6">
             Get In Touch
           </h2>
-          <p className="text-xl text-pub-gray max-w-3xl mx-auto">
+          <p className="text-xl text-pub-gray max-w-3xl mx-auto leading-relaxed">
             Have questions about our pubs, want to make a reservation, or planning a private event? We'd love to hear from you.
           </p>
         </div>
@@ -193,7 +200,7 @@ export default function ContactSection() {
               <Button
                 type="submit"
                 disabled={contactMutation.isPending}
-                className="group relative w-full bg-gradient-to-r from-pub-amber via-pub-gold to-pub-amber hover:from-pub-gold hover:via-pub-amber hover:to-pub-gold text-white py-6 px-8 rounded-2xl font-bold text-lg transition-all duration-500 transform hover:scale-105 hover:-translate-y-1 shadow-xl hover:shadow-2xl overflow-hidden disabled:opacity-50 disabled:transform-none"
+                className="group relative w-full btn-gradient-primary text-white py-6 px-8 rounded-2xl font-bold text-lg transition-all duration-500 transform hover:scale-105 hover:-translate-y-2 shadow-xl hover:shadow-glow-gold overflow-hidden disabled:opacity-50 disabled:transform-none"
               >
                 <div className="absolute inset-0 bg-gradient-to-r from-white/20 via-transparent to-white/10 rounded-2xl"></div>
                 <span className="relative z-10 flex items-center justify-center">
@@ -203,10 +210,14 @@ export default function ContactSection() {
                         <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
                         <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
                       </svg>
-                      Sending...
+                      Sending Message...
                     </>
                   ) : (
                     <>
+                      <svg className="w-5 h-5 mr-3 transition-transform group-hover:rotate-12" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+                        <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+                      </svg>
                       <span className="mr-3">Send Message</span>
                       <span className="inline-block transition-transform group-hover:translate-x-2 duration-300">→</span>
                     </>

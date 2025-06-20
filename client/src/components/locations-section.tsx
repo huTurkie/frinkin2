@@ -84,9 +84,12 @@ export default function LocationsSection() {
                     <span className="text-pub-green font-semibold bg-green-50 px-4 py-2 rounded-2xl text-sm border border-green-200">
                       {location.status}
                     </span>
-                    <button className="group relative bg-gradient-to-r from-pub-amber to-pub-gold hover:from-pub-gold hover:to-pub-amber text-white px-6 py-3 rounded-2xl font-bold transition-all duration-500 transform hover:scale-110 hover:-translate-y-1 shadow-lg hover:shadow-xl overflow-hidden">
+                    <button className="group relative btn-gradient-primary text-white px-6 py-3 rounded-2xl font-bold transition-all duration-500 transform hover:scale-110 hover:-translate-y-2 shadow-lg hover:shadow-glow overflow-hidden">
                       <div className="absolute inset-0 bg-gradient-to-r from-white/20 via-transparent to-white/10 rounded-2xl"></div>
                       <span className="relative z-10 flex items-center">
+                        <svg className="w-4 h-4 mr-2 transition-transform group-hover:rotate-12" fill="currentColor" viewBox="0 0 20 20">
+                          <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
+                        </svg>
                         <span className="mr-2">Visit</span>
                         <span className="inline-block transition-transform group-hover:translate-x-2 duration-300">→</span>
                       </span>
