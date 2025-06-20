@@ -21,10 +21,12 @@ export default function HeroSection() {
       <div className="relative z-10 text-center text-white max-w-6xl mx-auto px-4">
         {/* Logo/Brand Element */}
         <div className="mb-8">
-          <div className="inline-block p-4 border-2 border-pub-amber rounded-full mb-4">
-            <div className="w-16 h-16 bg-pub-amber rounded-full flex items-center justify-center">
-              <span className="text-2xl font-bold text-white">F</span>
-            </div>
+          <div className="inline-block p-6 bg-white/10 backdrop-blur-sm rounded-2xl mb-4 border border-white/20">
+            <img 
+              src="/attached_assets/firkin-header-logo-768x367_1750380151906.png" 
+              alt="Firkin Pubs Logo" 
+              className="h-20 w-auto object-contain"
+            />
           </div>
         </div>
         

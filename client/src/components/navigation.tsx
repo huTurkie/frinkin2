@@ -16,10 +16,11 @@ export default function Navigation() {
         <div className="flex justify-between items-center h-20">
           <div className="flex items-center">
             <div className="flex items-center space-x-3">
-              <div className="w-12 h-12 bg-pub-amber rounded-full flex items-center justify-center">
-                <span className="text-xl font-bold text-white">F</span>
-              </div>
-              <h1 className="font-playfair text-3xl font-bold text-pub-brown">Firkin Pubs</h1>
+              <img 
+                src="/attached_assets/firkin-header-logo-768x367_1750380151906.png" 
+                alt="Firkin Pubs Logo" 
+                className="h-12 w-auto object-contain"
+              />
             </div>
           </div>
           
