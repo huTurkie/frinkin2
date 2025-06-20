@@ -6,17 +6,20 @@ export default function FeaturesSection() {
     {
       icon: Building,
       title: "Toronto Locations",
-      description: "Strategic locations across Toronto's vibrant neighborhoods, each offering a unique local atmosphere and character."
+      description: "Strategic locations across Toronto's vibrant neighborhoods, each offering a unique local atmosphere and character.",
+      image: "https://images.unsplash.com/photo-1519167758481-83f29c75b5c0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600"
     },
     {
       icon: Beer,
       title: "Canadian Craft Selection",
-      description: "Curated selection of Canadian craft beers, premium spirits, and signature cocktails including our famous Caesar."
+      description: "Curated selection of Canadian craft beers, premium spirits, and signature cocktails including our famous Caesar.",
+      image: "https://images.unsplash.com/photo-1608270586620-248524c67de9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600"
     },
     {
       icon: Users,
       title: "Community Gathering",
-      description: "Neighborhood gathering places fostering community spirit with live music, sports viewing, and local events."
+      description: "Neighborhood gathering places fostering community spirit with live music, sports viewing, and local events.",
+      image: "https://images.unsplash.com/photo-1541532713592-79a0317b6b77?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600"
     }
   ];
 
@@ -45,19 +48,29 @@ export default function FeaturesSection() {
         <div className="grid md:grid-cols-3 gap-12">
           {features.map((feature, index) => (
             <div key={index} className="group">
-              <div className="bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-gray-100">
-                <div className="relative">
-                  <div className="w-24 h-24 bg-gradient-to-br from-pub-amber to-pub-gold rounded-2xl flex items-center justify-center mx-auto mb-8 group-hover:scale-110 transition-transform duration-300">
-                    <feature.icon className="w-12 h-12 text-white" />
+              <div className="bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 border-0 overflow-hidden">
+                <div className="relative h-48 overflow-hidden">
+                  <img
+                    src={feature.image}
+                    alt={feature.title}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
+                  <div className="absolute top-4 right-4 w-16 h-16 bg-gradient-to-br from-pub-amber to-pub-gold rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                    <feature.icon className="w-8 h-8 text-white" />
                   </div>
-                  <div className="absolute -top-2 -right-2 w-6 h-6 bg-pub-amber rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <div className="absolute bottom-4 left-4">
+                    <div className="w-8 h-1 bg-pub-amber rounded-full"></div>
+                  </div>
                 </div>
-                <h3 className="font-playfair text-2xl font-bold text-pub-brown mb-4 text-center">
-                  {feature.title}
-                </h3>
-                <p className="text-pub-gray text-center leading-relaxed">
-                  {feature.description}
-                </p>
+                <div className="p-8">
+                  <h3 className="font-playfair text-2xl font-bold text-pub-brown mb-4">
+                    {feature.title}
+                  </h3>
+                  <p className="text-pub-gray leading-relaxed">
+                    {feature.description}
+                  </p>
+                </div>
               </div>
             </div>
           ))}
@@ -65,13 +78,17 @@ export default function FeaturesSection() {
 
         {/* Call to Action */}
         <div className="text-center mt-16">
-          <div className="inline-flex items-center space-x-4 bg-white rounded-full px-8 py-4 shadow-lg">
-            <span className="text-pub-brown font-semibold">Ready to experience the difference?</span>
+          <div className="inline-flex items-center space-x-4 bg-white rounded-2xl px-8 py-6 shadow-xl border border-gray-100">
+            <span className="text-pub-brown font-semibold text-lg">Ready to experience the difference?</span>
             <button 
               onClick={() => scrollToSection("locations")}
-              className="bg-pub-amber hover:bg-pub-gold text-white px-6 py-2 rounded-full font-semibold transition-colors duration-300"
+              className="group relative btn-gradient-primary text-white px-8 py-3 rounded-2xl font-bold transition-all duration-500 transform hover:scale-110 hover:-translate-y-1 shadow-lg hover:shadow-glow overflow-hidden"
             >
-              Find Your Local
+              <div className="absolute inset-0 bg-gradient-to-r from-white/20 via-transparent to-white/10 rounded-2xl"></div>
+              <span className="relative z-10 flex items-center">
+                <span className="mr-2">Find Your Local</span>
+                <span className="inline-block transition-transform group-hover:translate-x-1 duration-300">→</span>
+              </span>
             </button>
           </div>
         </div>
