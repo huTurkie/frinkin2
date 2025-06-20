@@ -1,23 +1,7 @@
-import { useState } from "react";
 import { Facebook, Twitter, Instagram } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { useToast } from "@/hooks/use-toast";
 import { scrollToSection } from "@/lib/utils";
 
 export default function Footer() {
-  const [email, setEmail] = useState("");
-  const { toast } = useToast();
-
-  const handleNewsletterSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Newsletter subscription logic would go here
-    toast({
-      title: "Newsletter subscription",
-      description: "Thank you for subscribing to our newsletter!",
-    });
-    setEmail("");
-  };
 
   const quickLinks = [
     { label: "Find a Pub", action: () => scrollToSection("locations") },
@@ -38,7 +22,7 @@ export default function Footer() {
   return (
     <footer className="bg-pub-charcoal text-white py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid md:grid-cols-4 gap-8 mb-12">
+        <div className="grid md:grid-cols-3 gap-8 mb-12">
           <div>
             <h3 className="font-playfair text-2xl font-bold text-pub-cream mb-6">
               Firkin Pubs
@@ -101,29 +85,6 @@ export default function Footer() {
                 </li>
               ))}
             </ul>
-          </div>
-
-          <div>
-            <h4 className="font-semibold text-lg mb-6">Newsletter</h4>
-            <p className="text-gray-300 mb-4">
-              Stay updated with special offers, events, and news from our pubs.
-            </p>
-            <form onSubmit={handleNewsletterSubmit} className="space-y-3">
-              <Input
-                type="email"
-                placeholder="Enter your email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                required
-                className="bg-gray-700 text-white border-gray-600 focus:ring-2 focus:ring-pub-amber focus:border-transparent"
-              />
-              <Button
-                type="submit"
-                className="w-full bg-pub-amber hover:bg-pub-gold text-white py-3 px-4 rounded-lg font-semibold transition-colors duration-200"
-              >
-                Subscribe
-              </Button>
-            </form>
           </div>
         </div>
 
