@@ -19,16 +19,7 @@ export default function HeroSection() {
       <div className="absolute bottom-1/4 left-1/3 w-6 h-6 bg-pub-gold/30 rounded-full animate-pulse-slow delay-500"></div>
       
       <div className="relative z-10 text-center text-white max-w-6xl mx-auto px-4">
-        {/* Logo/Brand Element */}
-        <div className="mb-8">
-          <div className="inline-block p-6 bg-white/10 backdrop-blur-sm rounded-2xl mb-4 border border-white/20">
-            <img 
-              src="/firkin-logo.png" 
-              alt="Firkin Pubs Logo" 
-              className="h-20 w-auto object-contain"
-            />
-          </div>
-        </div>
+
         
         <h1 className="font-playfair text-6xl md:text-8xl font-bold mb-6 leading-tight">
           <span className="block text-pub-cream">Toronto's</span>
