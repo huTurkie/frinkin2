@@ -111,8 +111,16 @@ export default function LocationsSection() {
             <p className="text-pub-gray mb-6">
               Use our location finder to discover the Firkin pub closest to you.
             </p>
-            <button className="bg-gradient-to-r from-pub-amber to-pub-gold hover:from-pub-gold hover:to-pub-amber text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg">
-              Find Nearest Location
+            <button className="group relative btn-gradient-primary text-white px-12 py-4 rounded-2xl font-bold text-lg transition-all duration-500 transform hover:scale-110 hover:-translate-y-2 shadow-xl hover:shadow-glow-gold overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-r from-white/20 via-transparent to-white/10 rounded-2xl"></div>
+              <span className="relative z-10 flex items-center justify-center">
+                <svg className="w-5 h-5 mr-3 transition-transform group-hover:rotate-12" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
+                </svg>
+                <span className="mr-3">Find Nearest Location</span>
+                <span className="inline-block transition-transform group-hover:translate-x-2 duration-300">→</span>
+              </span>
+              <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-3/4 h-1 bg-white/40 rounded-full"></div>
             </button>
           </div>
         </div>
