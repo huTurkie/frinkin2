@@ -17,7 +17,7 @@ export default function Navigation() {
           <div className="flex items-center">
             <div className="flex items-center space-x-3">
               <img 
-                src="/attached_assets/firkin-header-logo-768x367_1750380151906.png" 
+                src="/firkin-logo.png" 
                 alt="Firkin Pubs Logo" 
                 className="h-12 w-auto object-contain"
               />

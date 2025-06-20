@@ -23,7 +23,7 @@ export default function HeroSection() {
         <div className="mb-8">
           <div className="inline-block p-6 bg-white/10 backdrop-blur-sm rounded-2xl mb-4 border border-white/20">
             <img 
-              src="/attached_assets/firkin-header-logo-768x367_1750380151906.png" 
+              src="/firkin-logo.png" 
               alt="Firkin Pubs Logo" 
               className="h-20 w-auto object-contain"
             />
